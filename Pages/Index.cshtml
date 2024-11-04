@@ -1,10 +1,85 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home - Supermarket";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container text-center py-5">
+    <!-- Welcome Sections -->
+    <h1 class="display-4">¡Bienvenido a Supermarket!</h1>
+    <p class="lead">Todo lo que necesitas, en un solo lugar.</p>
+    <p>Descubre nuestras ofertas y categorías de productos, ¡y encuentra todo lo que buscas!</p>
+
+    <!-- Section buttons -->
+    <div class="mt-4">
+        <a href="/Products" class="btn btn-primary btn-lg mx-2">Ver Productos</a>
+        <a href="/Offers" class="btn btn-success btn-lg mx-2">Ofertas Especiales</a>
+        <a href="/Categories" class="btn btn-info btn-lg mx-2">Categorías</a>
+    </div>
 </div>
+
+<!-- Categories Sections -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Categorías Populares</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Frutas y Verduras">
+                <div class="card-body">
+                    <h5 class="card-title">Frutas y Verduras</h5>
+                    <p class="card-text">Frescas y de la mejor calidad.</p>
+                    <a href="/Categories/FruitsAndVeggies" class="btn btn-primary">Explorar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Lácteos">
+                <div class="card-body">
+                    <h5 class="card-title">Lácteos</h5>
+                    <p class="card-text">Lo mejor en productos lácteos.</p>
+                    <a href="/Categories/Dairy" class="btn btn-primary">Explorar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Panadería">
+                <div class="card-body">
+                    <h5 class="card-title">Panadería</h5>
+                    <p class="card-text">Pan fresco y deliciosos pasteles.</p>
+                    <a href="/Categories/Bakery" class="btn btn-primary">Explorar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- OFFERS SECTIONS!! -->
+<div class="container my-5 bg-light py-4">
+    <h2 class="text-center">Ofertas Especiales</h2>
+    <p class="text-center">¡Aprovecha las mejores ofertas de la semana!</p>
+    <div class="row text-center">
+        <div class="col-md-3">
+            <h5>Oferta 1</h5>
+            <p>-20% en productos seleccionados</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Oferta 2</h5>
+            <p>2x1 en lácteos</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Oferta 3</h5>
+            <p>Descuento en carnes</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Oferta 4</h5>
+            <p>Precios especiales en snacks</p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Supermarket. Todos los derechos reservados By Ronaldo#11.</p>
+</footer>
