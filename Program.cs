@@ -14,7 +14,7 @@ namespace SupermarketWeb
 
             //Agregando el contexto SupermarketContext a la aplicación
             builder.Services.AddDbContext<SupermarketContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("SupermarketDB"))
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
             );
 
             var app = builder.Build();
