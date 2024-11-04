@@ -10,7 +10,10 @@ namespace SupermarketWeb.Data
         }
         public virtual DbSet<Product> Products { get; set; }
 
+        public virtual DbSet<Provider> Providers {  get; set; } 
+
         public DbSet<Category> Categories { get; set; }
+
 
         /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

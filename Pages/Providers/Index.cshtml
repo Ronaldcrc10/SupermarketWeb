@@ -1,0 +1,61 @@
+﻿@page
+@model SupermarketWeb.Pages.Providers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Index</h3>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Provider[0].ProviderName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Provider[0].Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Provider[0].Telefono)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@if(Model.Provider !=null && Model.Provider.Any())
+        {
+            @foreach (var item in Model.Provider)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProviderName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Direccion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefono)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+                <tr>
+                    <td colspan="4" class="text-center">
+                        Providers not avaible.
+                    </td>
+                </tr>
+        }
+
+    </tbody>
+</table>
