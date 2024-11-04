@@ -13,6 +13,7 @@ namespace SupermarketWeb.Data
         public virtual DbSet<Provider> Providers {  get; set; } 
 
         public DbSet<Category> Categories { get; set; }
+        public DbSet<SupermarketWeb.Models.PayMode> PayMode { get; set; } = default!;
 
 
         /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
